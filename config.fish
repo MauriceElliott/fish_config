@@ -17,4 +17,4 @@ fzf --fish | source
 
 set fish_greeting "Hello Maurice, what are we working on today?"
 
-clear && neofetch
+clear && fastfetch
