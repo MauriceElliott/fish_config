@@ -15,6 +15,6 @@ set GWD '/Users/mauriceelliott/Library/Application Support/Picotron/drive/deskto
 
 fzf --fish | source
 
-set fish_greeting "Hello Maurice, what are we working on today?"
+set fish_greeting ""
 
 clear && fastfetch
