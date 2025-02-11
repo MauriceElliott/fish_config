@@ -1,6 +1,10 @@
 function gitdeb
-    set -l message (or $argv[1] "Debugging")
+    if test -z "$argv[1]"
+        set message debugging
+    else
+        set message $argv[1]
+    end
     git add .
-    git commit -m $message
+    git commit -m "$message"
     git push origin HEAD
 end
