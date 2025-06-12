@@ -19,3 +19,4 @@ set fish_greeting ""
 
 sleep 0.1
 clear && fastfetch
+echo ""
