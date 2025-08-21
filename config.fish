@@ -27,3 +27,5 @@ set -x LD_LIBRARY_PATH ~/swift/swift-5.3/bin $LD_LIBRARY_PATH
 if test -f ~/.config/fish/local_variables.fish
     source ~/.config/fish/local_variables.fish
 end
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
