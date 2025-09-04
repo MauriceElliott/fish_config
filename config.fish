@@ -1,8 +1,8 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 set SHELL /usr/local/bin/fish
+
+set -g fish_history_max 1000000
+
+set -g fish_history_save_on_exit 1
 
 zoxide init fish | source
 
@@ -10,9 +10,6 @@ alias cd="z"
 alias ls='eza --icons=always'
 alias ll="ls -la"
 alias swiftc="swiftc -use-ld=bfd"
-
-#directory vars
-set GWD '/Users/mauriceelliott/Library/Application Support/Picotron/drive/desktop/projects/gut_wound'
 
 fzf --fish | source
 
