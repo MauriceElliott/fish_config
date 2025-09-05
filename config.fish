@@ -25,4 +25,6 @@ if test -f ~/.config/fish/local_variables.fish
     source ~/.config/fish/local_variables.fish
 end
 
+boot
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
