@@ -25,6 +25,6 @@ if test -f ~/.config/fish/local_variables.fish
     source ~/.config/fish/local_variables.fish
 end
 
-boot
+export COLORTERM=truecolor
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+boot
