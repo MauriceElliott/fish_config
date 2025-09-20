@@ -13,6 +13,8 @@ if status is-interactive
 
     set fish_greeting ""
 
+    sleep 0.1 #fixes a load of issues with fast fetch, not really sure why, but it seems to be consistent across terminals and OS's that adding this solves a lot of issues
+
     clear && fastfetch
     echo ""
 
