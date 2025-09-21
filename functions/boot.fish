@@ -11,6 +11,7 @@ function boot
     if not test -f $BOOT_FLAG_FILE
         touch $BOOT_FLAG_FILE
         NODE_NO_WARNINGS=1 gemini
+        clear
         return 0
     end
 
@@ -25,14 +26,7 @@ function boot
 
     if not test -f $BOOT_FLAG_FILE
         touch $BOOT_FLAG_FILE
-        firefox-bin
-        return 0
-    end
-
-    set BOOT_FLAG_FILE "$XDG_RUNTIME_DIR/btop_boot_flag"
-
-    if not test -f $BOOT_FLAG_FILE
-        touch $BOOT_FLAG_FILE
+        run_unattended firefox-bin
         btop
         return 0
     end
