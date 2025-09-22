@@ -1,64 +1,73 @@
-function boot --description "Function to boot core workflow pieces"
-    if test -z "$argv[1]"
-        _boot_all_nodes
+function boot_check
+    if not test -z "$argv[1]"
+        set INPUT $argv[1]
     else
-        _boot_single_node $argv[1] --force
+        set INPUT ""
     end
+
+    if not test -z "$argv[2]"
+        set FILE $argv[2]
+    else
+        set FILE ""
+    end
+
+    if test -z "$argv[3]"
+        set CMD $argv[3]
+    else
+        set CMD ""
+    end
+
+    if test -z "$INPUT"
+        if not test -f "$FILE"
+            touch $FILE
+            true
+        else
+            false
+        end
+    else
+        if "$INPUT" = "$CMD"
+            true
+        else
+            false
+        end
+    end
+    false
 end
 
-function _boot_all_nodes --description "Boot all workflow nodes that haven't been started"
-    set nodes hx gem git ff
+function boot --description "Function to boot core workflow pieces from"
+    # Usage: boot "name_of_workflow_piece"
 
-    for node in $nodes
-        _boot_single_node $node
+    if not test -z "$argv[1]"
+        echo "arg set"
+        set INPUT $argv[1]
+    else
+        echo "arg not set"
+        set INPUT ""
     end
-end
 
-function _boot_single_node --description "Boot a specific workflow node"
-    # Usage: _boot_single_node <node_name> [--force]
-    set node_name $argv[1]
-    set force_mode (contains -- --force $argv)
+    if boot_check "$INPUT" "$XDG_RUNTIME_DIR/magios_hx_boot_flag" h
+        echo "hx returns true"
+        cd ~/MAGIos
+        hx ~/MAGIos/
+        return 0
+    end
 
-    switch $node_name
-        case hx
-            set BOOT_FLAG_FILE "$XDG_RUNTIME_DIR/magios_hx_boot_flag"
-            if test $force_mode -eq 0; and test -f $BOOT_FLAG_FILE
-                return 0
-            end
-            touch $BOOT_FLAG_FILE
-            cd ~/MAGIos
-            hx ./
+    if boot_check "$INPUT" "$XDG_RUNTIME_DIR/gemini_boot_flag" gem
+        cd ~/MAGIos
+        NODE_NO_WARNINGS=1 gemini
+        clear
+        return 0
+    end
 
-        case gem
-            set BOOT_FLAG_FILE "$XDG_RUNTIME_DIR/gemini_boot_flag"
-            if test $force_mode -eq 0; and test -f $BOOT_FLAG_FILE
-                return 0
-            end
-            touch $BOOT_FLAG_FILE
-            cd ~/MAGIos
-            NODE_NO_WARNINGS=1 gemini
-            clear
+    if boot_check "$INPUT" "$XDG_RUNTIME_DIR/magios_git_boot_flag" mgit
+        touch $BOOT_FLAG_FILE
+        cd ~/MAGIos
+        return 0
+    end
 
-        case git
-            set BOOT_FLAG_FILE "$XDG_RUNTIME_DIR/magios_git_boot_flag"
-            if test $force_mode -eq 0; and test -f $BOOT_FLAG_FILE
-                return 0
-            end
-            touch $BOOT_FLAG_FILE
-            cd ~/MAGIos
-
-        case ff
-            set BOOT_FLAG_FILE "$XDG_RUNTIME_DIR/firefox_boot_flag"
-            if test $force_mode -eq 0; and test -f $BOOT_FLAG_FILE
-                return 0
-            end
-            touch $BOOT_FLAG_FILE
-            run_unattended firefox-bin
-            btop
-
-        case '*'
-            echo "Unknown node: $node_name"
-            echo "Available nodes: hx, gem, git, ff"
-            return 1
+    if boot_check "$INPUT" "$XDG_RUNTIME_DIR/firefox_boot_flag" ff
+        run_unattended firefox-bin
+        btop
+        return 0
     end
 end

@@ -23,5 +23,5 @@ if status is-interactive
     end
 
     export COLORTERM=truecolor
-    boot
+    #    boot
 end
