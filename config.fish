@@ -25,6 +25,10 @@ if status is-interactive
             source ~/.config/fish/local_variables.fish
         end
 
+        source ~/.config/fish/_taclaptop.fish
+        source ~/.config/fish/_eighthcircle.fish
+        source ~/.config/fish/_9thcircle.fish
+
         export COLORTERM=truecolor
 
         jdi
