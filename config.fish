@@ -11,7 +11,6 @@ if status is-interactive
         alias cd="z"
         alias ls='eza --icons=always'
         alias ll="ls -la"
-        alias rm="sudo rm"
 
         fzf --fish | source
 
