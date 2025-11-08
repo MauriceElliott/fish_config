@@ -4,7 +4,8 @@ set -g fish_history_save_on_exit 1
 
 if status is-interactive
     if not set -q ZELLIJ
-        zellij attach --create main
+        echo zellij currently disabled
+        # zellij attach --create main
     else
         zoxide init fish | source
 
@@ -35,6 +36,3 @@ if status is-interactive
         echo ""
     end
 end
-
-# opencode
-fish_add_path /home/maurice/.opencode/bin
