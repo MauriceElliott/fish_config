@@ -4,35 +4,33 @@ set -g fish_history_save_on_exit 1
 
 if status is-interactive
     if not set -q ZELLIJ
-        echo zellij currently disabled
         # zellij attach --create main
-    else
-        zoxide init fish | source
-
-        alias cd="z"
-        alias ls='eza --icons=always'
-        alias ll="ls -la"
-
-        fzf --fish | source
-
-        set fish_greeting ""
-
-        sleep 0.1 #fixes a load of issues with fast fetch, not really sure why, but it seems to be consistent across terminals and OS's that adding this solves a lot of issues
-
-        clear && fastfetch
-        echo ""
-
-        if test -f ~/.config/fish/local_variables.fish
-            source ~/.config/fish/local_variables.fish
-        end
-
-        source ~/.config/fish/_taclaptop.fish
-        source ~/.config/fish/_eighthcircle.fish
-        source ~/.config/fish/_9thcircle.fish
-
-        export COLORTERM=truecolor
-
-        jdi
-        echo ""
     end
+    zoxide init fish | source
+
+    alias cd="z"
+    alias ls='eza --icons=always'
+    alias ll="ls -la"
+
+    fzf --fish | source
+
+    set fish_greeting ""
+
+    sleep 0.1 #fixes a load of issues with fast fetch, not really sure why, but it seems to be consistent across terminals and OS's that adding this solves a lot of issues
+
+    clear && fastfetch
+    echo ""
+
+    if test -f ~/.config/fish/local_variables.fish
+        source ~/.config/fish/local_variables.fish
+    end
+
+    source ~/.config/fish/_taclaptop.fish
+    source ~/.config/fish/_eighthcircle.fish
+    source ~/.config/fish/_9thcircle.fish
+
+    export COLORTERM=truecolor
+
+    jdi
+    echo ""
 end
