@@ -1,3 +1,3 @@
-if test (hostname) = "9thcircle"
-    # Add 9thcircle-specific configuration here
+if test (hostname) = ninthCircle
+    set PATH $PATH ~/.local/bin
 end
