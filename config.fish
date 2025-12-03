@@ -13,6 +13,7 @@ if status is-interactive
     alias ll="ls -la"
     alias gist="git status"
     alias gip="git pull origin HEAD && git fetch"
+    alias cls="clear"
 
     fzf --fish | source
 
