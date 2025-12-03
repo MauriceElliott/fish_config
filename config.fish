@@ -12,6 +12,7 @@ if status is-interactive
     alias ls='eza --icons=always'
     alias ll="ls -la"
     alias gist="git status"
+    alias gip="git pull origin HEAD && git fetch"
 
     fzf --fish | source
 
