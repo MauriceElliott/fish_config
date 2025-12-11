@@ -40,4 +40,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/root/bin\x1e/home/maurice/\x2eopencode/bin\x1e/home/maurice/odinlang/\x1e\x2e/odinlang/\x1e/home/maurice/swift\x2d5\x2e10\x2dRELEASE\x2dubuntu22\x2e04/usr/bin\x1e/home/maurice/swift/swift\x2d5\x2e3/bin\x1e/home/maurice/odin\x1e/home/maurice/\x2elocal/bin\x1e/Users/mauriceelliott/path_src\x1e/usr/local/sbin\x1e/usr/bin
+SETUVAR fish_user_paths:/usr/local/opt/openjdk/bin\x1e/root/bin\x1e/home/maurice/\x2eopencode/bin\x1e/home/maurice/odinlang/\x1e\x2e/odinlang/\x1e/home/maurice/swift\x2d5\x2e10\x2dRELEASE\x2dubuntu22\x2e04/usr/bin\x1e/home/maurice/swift/swift\x2d5\x2e3/bin\x1e/home/maurice/odin\x1e/home/maurice/\x2elocal/bin\x1e/Users/mauriceelliott/path_src\x1e/usr/local/sbin\x1e/usr/bin
