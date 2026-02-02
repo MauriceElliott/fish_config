@@ -3,12 +3,9 @@ set -g fish_history_max 1000000
 set -g fish_history_save_on_exit 1
 
 if status is-interactive
-    if not set -q ZELLIJ
-        # zellij attach --create main
-    end
-    zoxide init fish | source
+    zoxide init --cmd=cd fish
 
-    alias cd="z"
+    # alias cd="z"
     alias ls='eza --icons=always'
     alias ll="ls -la"
     alias gist="git status"
@@ -25,7 +22,7 @@ if status is-interactive
         source ~/.config/fish/local_variables.fish
     end
 
-    source ~/.config/fish/_taclaptop.fish
+    source ~/.config/fish/_kblaptop.fish
     source ~/.config/fish/_eighthcircle.fish
     source ~/.config/fish/_9thcircle.fish
 
