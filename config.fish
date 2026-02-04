@@ -3,7 +3,7 @@ set -g fish_history_max 1000000
 set -g fish_history_save_on_exit 1
 
 if status is-interactive
-    zoxide init --cmd=cd fish
+    zoxide init fish | source
 
     # alias cd="z"
     alias ls='eza --icons=always'
