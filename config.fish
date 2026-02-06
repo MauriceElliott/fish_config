@@ -5,7 +5,7 @@ set -g fish_history_save_on_exit 1
 if status is-interactive
     zoxide init fish | source
 
-    # alias cd="z"
+    alias cd="z"
     alias ls='eza --icons=always'
     alias ll="ls -la"
     alias gist="git status"
