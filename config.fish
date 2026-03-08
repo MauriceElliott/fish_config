@@ -5,6 +5,7 @@ set -g fish_history_save_on_exit 1
 if status is-interactive
     zoxide init fish | source
 
+    alias hx="helix"
     alias cd="z"
     alias ls='eza --icons=always'
     alias ll="ls -la"
@@ -25,6 +26,7 @@ if status is-interactive
     source ~/.config/fish/_kblaptop.fish
     source ~/.config/fish/_eighthcircle.fish
     source ~/.config/fish/_9thcircle.fish
+    source ~/.config/fish/_7thCircle.fish
 
     # export COLORTERM=truecolor
 
