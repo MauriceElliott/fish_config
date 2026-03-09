@@ -5,7 +5,6 @@ set -g fish_history_save_on_exit 1
 if status is-interactive
     zoxide init fish | source
 
-    alias hx="helix"
     alias cd="z"
     alias ls='eza --icons=always'
     alias ll="ls -la"
@@ -30,9 +29,11 @@ if status is-interactive
 
     # export COLORTERM=truecolor
 
-    clear && fastfetch
-    echo ""
+    if test "$UNAT"
+        clear && fastfetch
+        echo ""
 
-    jdi
-    echo ""
+        jdi
+        echo ""
+    end
 end
