@@ -29,7 +29,7 @@ if status is-interactive
 
     # export COLORTERM=truecolor
 
-    if test "$UNAT"
+    if not test "$UNAT"
         clear && fastfetch
         echo ""
 
