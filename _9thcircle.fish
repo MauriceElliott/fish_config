@@ -7,4 +7,5 @@ if test (hostname) = ninthCircle
     # bun
     set --export BUN_INSTALL "$HOME/.bun"
     set --export PATH $BUN_INSTALL/bin $PATH
+    alias hx nvim
 end
