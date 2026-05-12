@@ -3,5 +3,5 @@ if test (hostname) = KB-GH85FB4
     set PATH $PATH /root/go/bin
     set PATH $PATH /home/mauricelliott/.local/bin
     set PATH $PATH ~/.local/bin
-    alias hx nvim
+    alias hx helix
 end

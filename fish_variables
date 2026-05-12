@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/Users/maurice/Developer/PlaydateSDK/bin\x1e/usr/local/opt/openjdk/bin\x1e/home/maurice/PlaydateSDK/bin\x1e/root/bin\x1e/home/maurice/\x2eopencode/bin\x1e/home/maurice/odinlang/\x1e\x2e/odinlang/\x1e/home/maurice/swift\x2d5\x2e10\x2dRELEASE\x2dubuntu22\x2e04/usr/bin\x1e/home/maurice/swift/swift\x2d5\x2e3/bin\x1e/home/maurice/odin\x1e/home/maurice/\x2elocal/bin\x1e/Users/mauriceelliott/path_src\x1e/usr/local/sbin\x1e/usr/bin
+SETUVAR fish_user_paths:/root/\x2ecargo/bin\x1e/Users/maurice/Developer/PlaydateSDK/bin\x1e/usr/local/opt/openjdk/bin\x1e/home/maurice/PlaydateSDK/bin\x1e/root/bin\x1e/home/maurice/\x2eopencode/bin\x1e/home/maurice/odinlang/\x1e\x2e/odinlang/\x1e/home/maurice/swift\x2d5\x2e10\x2dRELEASE\x2dubuntu22\x2e04/usr/bin\x1e/home/maurice/swift/swift\x2d5\x2e3/bin\x1e/home/maurice/odin\x1e/home/maurice/\x2elocal/bin\x1e/Users/mauriceelliott/path_src\x1e/usr/local/sbin\x1e/usr/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute
